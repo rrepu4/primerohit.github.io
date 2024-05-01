@@ -1,52 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Rohit Repu Resume</title>
-   <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive HTML Resume</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+  }
+  header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    background-image: url('https://i.pinimg.com/originals/fe/5f/67/fe5f677b1627009c4b3e1c1c31dedf71.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .resume {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  .resume:hover {
+    transform: translateY(-5px);
+  }
+  .resume h2 {
+    margin-top: 0;
+  }
+  .resume ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .resume li {
+    margin-bottom: 10px;
+  }
+  .resume li span {
+    font-weight: bold;
+  }
+  .resume li:hover {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+  }
+  .hidden {
+    display: none;
+  }
+  .profile-img {
+    max-width: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+</style>
 </head>
 <body>
-  <div>
-  <h1>Rohit Repu</h1>
-  <p>Self motivated, creative individual with a passion for bridging people and technology.</p>
-  </div>
-  
-  <div class="exp-header">
-    <h3> Professional Experience </h3>
-  </div>
-  
-  <div>
-  <h4>Prime Digital Academy</h4>
-  <h5> Head of Campus Development, Lead</h5>
-  <h6> Dec 2018 - Curent | Oct 2014 - Oct 2017</h6>
-  
-  <ul>
-    <li> Awesome Information here!</li>
-    <li> Awesome Information here!</li> 
-    <li> Awesome Information here!</li>
-  </ul>
-  </div>
-  
-  <div>
-  <h4>Nerdery</h4>
-  <h5> Software Engineer </h5>
-  <h6> April 2018 - Dec 2018 | Aug 2011 - Oct 2014</h6>
-  
-  <ul>
-    <li> Awesome Information here!</li>
-    <li> Awesome Information here!</li> 
-    <li> Awesome Information here!</li>
-  </ul>
-  </div>
-  
-  <div class="exp-header">
-    <h3> Education </h3>
-  </div>
-  
-  <div>
-    <h5>Masters - Engineering Science</h5>
-    <h6>Louisiana State University - Baton Rouge, LA - Completed 2008</h6>
-  </div>
-  </body>
+
+<header>
+  <h1>Interactive Resume</h1>
+</header>
+
+<main>
+  <article class="resume">
+    <img src="https://i.ibb.co/Dbh0NwM/IMG-7541.jpg" alt="Profile Picture" class="profile-img">
+    <h2>John Doe</h2>
+    <ul>
+      <li><span>Location:</span> New York, NY</li>
+      <li><span>Email:</span> john.doe@example.com</li>
+      <li><span>Phone:</span> +1 (123) 456-7890</li>
+      <li><span>Skills:</span> HTML, CSS, JavaScript, Python</li>
+      <li><span>Experience:</span> Web Developer at ABC Company</li>
+      <li><span>Education:</span> Bachelor's in Computer Science</li>
+    </ul>
+    <button class="showButton">Show Interests</button>
+    <section class="interests hidden">
+      <h3>Interests</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+  </article>
+
+  <!-- Another Article -->
+</main>
+
+<footer>
+  <p>&copy; 2024 Interactive Resume. All rights reserved.</p>
+</footer>
+
+<script>
+  const showButtons = document.querySelectorAll('.showButton');
+  const interestsDivs = document.querySelectorAll('.interests');
+
+  showButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      interestsDivs[index].classList.toggle('hidden');
+      if (interestsDivs[index].classList.contains('hidden')) {
+        button.textContent = 'Show Interests';
+      } else {
+        button.textContent = 'Hide Interests';
+      }
+    });
+  });
+</script>
+
+</body>
 </html>
