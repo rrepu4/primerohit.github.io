@@ -1,75 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive HTML Resume</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f1f1f1;
-  }
-  header, footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-  }
-  main, div {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    background-image: url('https://i.pinimg.com/originals/fe/5f/67/fe5f677b1627009c4b3e1c1c31dedf71.png');
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .resume {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    transition: transform 0.3s ease;
-  }
-  .resume:hover {
-    transform: translateY(-5px);
-  }
-  .resume h2 {
-    margin-top: 0;
-  }
-  .resume ul {
-    list-style-type: disc; /* Changed list-style-type to display bullet points */
-    padding: 0;
-  }
-  .resume li {
-    margin-bottom: 10px;
-  }
-  .resume li span {
-    font-weight: bold;
-  }
-  .resume li:hover {
-    background-color: yellow;
-    transition: background-color 0.3s ease;
-  }
-  .hidden {
-    display: none;
-  }
-  .profile-img {
-    max-width: 100px;
-    border-radius: 40%;
-    position: absolute;
-    top: 10px;
-    right: 10px;
- 
-   
-  }
-</style>
+<meta name="viewport" content="width=device-width">
 </head>
+  
+  
 <body>
 
 <header>
@@ -78,22 +14,20 @@
 
 <main>
   <article class="resume">
-    <img src="https://i.ibb.co/Dbh0NwM/IMG-7541.jpg" alt="Profile Picture" class="profile-img">
+    <img src="https://i.ibb.co/Dbh0NwM/IMG-7541.jpg" alt="Profile Picture" class="profileimg">
     <h2>Rohit Repu</h2>
     <ul>
       <li><span>Current Location:</span> St. Paul, MN</li>
       <li><span>Email:</span> rrepu4@gmail.com </li>
       <li><span>Phone:</span> 225-333-7265 </li>
       <li><span>Education:</span> Masters in Engineering Science</li>
-    </ul>
-    
+    </ul>  
   </article>
 </main>
 
  
 <div>
   <article class="resume">
-
     <ul>
       <li><span>Company:</span> Ameriprise Financial</li>
       <li><span>Headquarters</span> Minneapolis, MN</li>
@@ -101,18 +35,39 @@
       <li><span>Designation:</span> SharePoint Engineer</li>
       <li><span>Duration:</span> May 2018 to Dec 2023</li>
     </ul>
-    <button class="showButton">Show Responsibitlies</button>
-    <section class="interests hidden">
+    <button class="show">Hide Responsibitlies</button>
+    <section class="hide">
       <h3>Responsibilities:</h3>
       <ul>
-
-	 <li>Gathered business requirements from Business and convert them to technically solutions. </li>
+	
      <li>Address and resolve potential issues regarding Migration of SharePoint 2013 solutions to SharePoint Online Environment.</li>
      <li>Developed solutions using power apps, power automate and power BI.</li>
-     <li>Supported their internal and external websites for the finance development.</li>
+     <li>Gather business requirements from Business and convert them to technically solutions.</li>
+     <li>Address and resolve issues regarding Migration of SharePoint to SharePoint and SharePoint to SharePoint Online.</li>
+     <li>Responsible for being a Subject Matter Expert in SharePoint with detail knowledge of  Out-Of-The-Box Capabilities.</li>
+     
+ </ul>
+    </section>
+  </article>
+</div>
+  
+  <div>
+  <article class="resume">
+    <ul>
+      <li><span>Company:</span> Informatics Corp</li>
+      <li><span>Headquarters</span> Reston, VA</li>
+      <li><span>Phone:</span> (855) 324 4636</li>
+      <li><span>Designation:</span> Consultant </li>
+      <li><span>Duration:</span> Feb 2010 to Feb 2018</li>
+    </ul>
+    <button class="show">Hide Responsibitlies</button>
+    <section class="hide">
+      <h3>Responsibilities:</h3>
+      <ul>
+	 <li>Gathered business requirements from Business and convert them to technically solutions. </li>
+     <li>Developed solutions using power apps, power automate and power BI.</li>
      <li>Gather business requirements from Business and convert them to technically solutions.</li>
      <li>Developed and maintained their internal and external websites.</li>
-     <li>Responsible for being a Subject Matter Expert in SharePoint with detail knowledge of  Out-Of-The-Box Capabilities.</li>
      <li>Designed the interfaces needed for exposing the Business Components. Leverage and extend out of the box SharePoint functionality to deliver solutions, Dashboards. </li>
      <li>Provide support and maintenance of existing systems by researching and troubleshooting. Regularly communicated progress, issues, and risks to the team and the end clients.</li>
      <li>Interact with client understanding’s client’s needs to come up with a viable solution, both Working individually and also with collaborative effort of the team.</li>
@@ -124,10 +79,9 @@
 <footer>
   <p>&copy; Rohit Repu. All rights reserved.</p>
 </footer>
-
 <script>
-  const showButtons = document.querySelectorAll('.showButton');
-  const interestsDivs = document.querySelectorAll('.interests');
+  const showButtons = document.querySelectorAll('.show');
+  const interestsDivs = document.querySelectorAll('.hide');
 
   showButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
@@ -140,6 +94,7 @@
     });
   });
 </script>
+
 
 </body>
 </html>
