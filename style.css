@@ -1,14 +1,65 @@
-body {
-  background-color: #444444;
-  color: #dddddd;
-  font-family: Arial, helvetica,sans-serif;
-  margin: 10% 20%;
-}
-
-.exp-header{
-  text-align: center;
-  text-transform: uppercase;
-  border-top: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
-  background-color: rgba(0,0,0,0.2);
-}
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+  }
+  header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  main, div {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    background-image: url('https://i.pinimg.com/originals/fe/5f/67/fe5f677b1627009c4b3e1c1c31dedf71.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .resume {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  .resume:hover {
+    transform: translateY(-5px);
+  }
+  .resume h2 {
+    margin-top: 0;
+  }
+  .resume ul {
+    list-style-type: disc; /* Changed list-style-type to display bullet points */
+    padding: 0;
+  }
+  .resume li {
+    margin-bottom: 10px;
+  }
+  .resume li span {
+    font-weight: bold;
+  }
+  .resume li:hover {
+    background-color: yellow;
+    transition: background-color 0.3s ease;
+  }
+  .hidden {
+    display: none;
+  }
+  .profileimg {
+    max-width: 100px;
+    border-radius: 40%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+ 
+   
+  }
+</style>
