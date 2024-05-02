@@ -62,6 +62,6 @@
   }
 .profileimg:hover {
     /*transform: perspective(100px) translateZ(5px);*/
-  transform: translateZ(20px);
+  transform: translateZ(4px);
   }
 </style>
