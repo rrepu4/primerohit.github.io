@@ -50,7 +50,7 @@
   }
   .resume li:hover {
     background-color: #F7D560;
-    transition: background-color 1.3s ease;
+    transition: background-color 0.9s ease;
   }
   .hidden {
     display: none;
