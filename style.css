@@ -29,9 +29,11 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
     transition: transform 0.3s ease;
+    z-index: 1;
   }
   .resume:hover {
     transform: translateY(-25px);
+    z-index: 2;
   }
   .resume h2 {
     margin-top: 0;
