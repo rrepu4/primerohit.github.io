@@ -47,8 +47,8 @@
     font-weight: bold;
   }
   .resume li:hover {
-    background-color: yellow;
-    transition: background-color 0.3s ease;
+    background-color: #F7D560;
+    transition: background-color 1.3s ease;
   }
   .hidden {
     display: none;
