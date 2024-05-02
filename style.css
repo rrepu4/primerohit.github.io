@@ -59,7 +59,7 @@
     position: absolute!important;
     top: 10px!important;
     right: 10px!important;
-    transform: translateZ(42px);
+ 
   }
 .profileimg:hover {
     transform: perspective(100px) translateZ(50px);
