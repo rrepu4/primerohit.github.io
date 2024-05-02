@@ -32,7 +32,6 @@
   }
   .resume:hover {
     transform: translateY(-20px);
-    transform: translateZ(-20px);
   }
   .resume h2 {
     margin-top: 0;
@@ -60,6 +59,7 @@
     position: absolute!important;
     top: 10px!important;
     right: 10px!important;
+    transform: translateZ(42px);
  
    
   }
